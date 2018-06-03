@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "zan-row": "./../../zan/row/index",
+    "zan-col": "./../../zan/col/index",
+    "zan-icon": "./../../zan/icon/index",
+    "zan-button": "./../../zan/btn/index",
+    "zan-switch": "./../../zan/switch/index",
+    "zan-noticebar": "./../../zan/noticebar/index"
+  }
+}

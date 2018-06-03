@@ -1,0 +1,38 @@
+<view>
+  <image src="./../../src/pic/header.png" mode='widthFix' class="header-image" />  
+  <view style='margin-top:{{style.marginTop}}'>
+    <zan-row>
+      <zan-col col="18" col-class="custom-zan-col">
+        <zan-field
+          placeholder="请输入IP地址"
+          value="{{ip}}"
+          bind:focus="onIpFieldFoucs"
+          bind:change="onIpFieldChange">
+        </zan-field>
+      </zan-col>
+      <zan-col col="6" col-class="custom-zan-col">
+        <zan-button type='primary' bindtap='ipSearch'>查询</zan-button>
+      </zan-col>
+    </zan-row>
+  </view>
+    <zan-field 
+      title="IP地址："
+      disabled="true" value="{{resp.ip}}"></zan-field>
+    <zan-field 
+      title="国  家："
+      disabled="true" value="{{resp.country}}"></zan-field>
+    <zan-field 
+      title="区  域："
+      disabled="true" value="{{resp.area}}"></zan-field>
+    <zan-field 
+      title="所属省："
+      disabled="true" value="{{resp.region}}"></zan-field>
+    <zan-field 
+      title="城  市："
+      disabled="true" value="{{resp.city}}"></zan-field>
+    <zan-field 
+      title="运营商："
+      disabled="true" value="{{resp.isp}}"></zan-field>
+  <view >
+  </view>
+</view>

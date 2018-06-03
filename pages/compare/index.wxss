@@ -1,0 +1,51 @@
+/* pages/compare/index.wxss */
+.header-image {
+  width: 100%;
+}
+
+.compare-head {
+  color: green;
+  float:left;
+}
+
+.compare-pic {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 35rpx;
+  border-radius: 0%;
+}
+
+.compare-button {
+  width: 300rpx;
+  margin: 30rpx;
+  float:left;
+}
+
+.compare-result-view {
+  text-align: center;
+  width: 600rpx;
+  height: 300rpx;
+  margin: 10rpx;
+  border-style: solid;
+	border-width: 5px;
+  border-color: greenyellow;
+}
+
+.compare-result-view text {
+  display:block;
+  color: royalblue;
+  
+}
+
+.compare-result-view result {
+  display:block;
+  margin-top: 25px;
+  color: red;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 100rpx;
+}
+
+.usermotto {
+  margin-top: 15px;
+}

@@ -1,0 +1,17 @@
+.header-image {
+  width: 100%;
+}
+
+.menu-icon {
+  margin-left: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: grey;
+  border-radius: 30rpx;
+}
+
+.menu-text {
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  color: black;
+}

@@ -1,0 +1,17 @@
+<view>
+  <image src="./../../src/pic/header.png" mode='widthFix' class="header-image" /> 
+  <zan-row>
+    <zan-col col="6" col-class="custom-zan-col" wx:for='{{menus}}' wx:key='id'>
+      <view bindtap="toCompareIndex" data-url='{{item.page}}'>
+        <image class='menu-icon' src='{{item.url}}' style="display:block" />
+        <text class='menu-text'>{{item.name}}</text>
+      </view>
+    </zan-col>
+  </zan-row>
+
+  Hello World
+  <zan-button>按钮</zan-button>
+  <zan-icon type="location"></zan-icon>
+  <zan-switch checked="true"></zan-switch>
+  <zan-noticebar text="Hello World I am Hewuqi" scrollable="true" color="#000" backgroundColor="grey"></zan-noticebar>
+</view>

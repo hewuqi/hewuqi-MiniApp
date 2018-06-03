@@ -1,0 +1,8 @@
+.header-image {
+  width: 100%;
+}
+
+.picker-isp {
+  margin-top: 20rpx;
+  text-align: center
+}
