@@ -9,23 +9,16 @@
 }
 
 .compare-pic {
-  width: 300rpx;
-  height: 300rpx;
-  margin: 35rpx;
-  border-radius: 0%;
-}
-
-.compare-button {
-  width: 300rpx;
-  margin: 30rpx;
-  float:left;
+  background-color: black;
+  width: 330rpx;
+  height: 330rpx;
+  margin: 25rpx;
 }
 
 .compare-result-view {
   text-align: center;
-  width: 600rpx;
-  height: 300rpx;
-  margin: 10rpx;
+  width: 730rpx;
+  height: 400rpx;
   border-style: solid;
 	border-width: 5px;
   border-color: greenyellow;
@@ -34,7 +27,6 @@
 .compare-result-view text {
   display:block;
   color: royalblue;
-  
 }
 
 .compare-result-view result {

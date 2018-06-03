@@ -6,7 +6,6 @@
         <zan-field
           placeholder="请输入IP地址"
           value="{{ip}}"
-          bind:focus="onIpFieldFoucs"
           bind:change="onIpFieldChange">
         </zan-field>
       </zan-col>

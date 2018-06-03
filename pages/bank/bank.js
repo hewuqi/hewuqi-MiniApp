@@ -7,13 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mnc: "0",
-    lac: "",
-    ci: "",
-    index: 0,
-    isps: ["移动", "联通", "电信"],
+    cardNo: "",
     resp: {},
-    markers: []
   },
 
   /**
@@ -72,35 +67,10 @@ Page({
     
   },
   
-  //listenPickerSelected
-  listenPickerSelected: function(e) {
-    this.setData({
-      index: e.detail.value
-    })
-    switch(this.data.index) {
-      case "0":
-        this.data.mnc = "0";
-        break
-      case "1":
-        this.data.mnc = "1";
-        break
-      case "2":
-        this.data.mnc = "11"
-        break
-    }
-  },
-
-  //LAC输入框的值改变
-  onLacFieldChange: function(e) {
-    this.setData({
-      lac: e.detail.detail.value
-    });
-  },
-
   //CI输入框的值改变
-  onCiFieldChange: function (e) {
+  onCardNoFieldChange: function (e) {
     this.setData({
-      ci: e.detail.detail.value
+      cardNo: e.detail.detail.value
     });
     
   },
@@ -112,23 +82,12 @@ Page({
       title: '正在查询，请稍后',
     })
     wx.request({
-      url: serverUrl + "/freeController/cellSearch?mnc=" + this.data.mnc
-          + "&lac=" + this.data.lac + "&ci=" + this.data.ci,
+      url: serverUrl + "/freeController/bankCardSearch?cardNo=" + _this.data.cardNo,
       success: function (res) {
         var data = res.data
         if (data["code"] == "200") {
           _this.setData({
             resp: data.data
-          }),
-          _this.setData({
-            markers:[{
-                iconPath: "./../../src/pic/location.png",
-                id: 0,
-                latitude: data.data.lat,
-                longitude: data.data.lon,
-                width: 48,
-                height: 48
-              }]
           })
         } else {
         }

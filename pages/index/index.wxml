@@ -1,24 +1,12 @@
 <!--index.wxml-->
-<view class="container">
-
-<view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 核爆炸 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-logo" src="../../src/pic/favicon.jpg" background-size="cover"></image>
-      <text class="userinfo-nickname">核爆炸</text>
+<view>
+  <image src="./../../src/pic/header.png" mode='widthFix' class="header-image" />  
+  <view class="main">
+    <block>
+      <image bindtap="bindViewTap" class="logo" src="./../../src/pic/favicon.jpg" background-size="cover"></image>
+      <text class="userinfo-nickname">警便利</text>
+      <image class="title-image" src="./../../src/pic/title.jpg"></image>
     </block>
-  </view>
-
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-
-  <view class="usermotto">
-    <!-- <text class="user-motto">{{motto}}</text> -->
-    <button type="primary" bindtap='showHelloWorld'>登陆</button>
+    
   </view>
 </view>

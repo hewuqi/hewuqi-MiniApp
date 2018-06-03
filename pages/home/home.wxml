@@ -8,10 +8,4 @@
       </view>
     </zan-col>
   </zan-row>
-
-  Hello World
-  <zan-button>按钮</zan-button>
-  <zan-icon type="location"></zan-icon>
-  <zan-switch checked="true"></zan-switch>
-  <zan-noticebar text="Hello World I am Hewuqi" scrollable="true" color="#000" backgroundColor="grey"></zan-noticebar>
 </view>

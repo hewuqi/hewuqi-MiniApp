@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ip: "115.29.33.118",
+    ip: "",
     style:{
       marginTop: "0rpx"
     },
@@ -90,22 +90,23 @@ Page({
   //ip查询
   ipSearch: function(e) {
     var _this = this
-    var ip =  e.currentTarget.dataset['ip']
-    this.setData({
-      style: {
-        "marginTop": "0rpx"
-      }
-    });
+    var ip =  _this.data.ip
+    if (!this.ipVaild(ip)) {
+      wx.showToast({
+        title: 'IP地址无效',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
     wx.showLoading({
       title: '正在查询，请稍后',
     })
     wx.request({
       url: serverUrl + "/freeController/ipSearch?ip=" + this.data.ip,
       success: function (res) {
-        //console.log(res)
         var data = res.data
         if (data["code"] == "200") {
-          console.log(data)
           _this.setData({
             resp: data.data
           })
@@ -122,5 +123,17 @@ Page({
         wx.hideLoading()
       }
     })
+  },
+
+  ipVaild: function(ip){
+    var obj = ip;
+    var exp = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;
+    var reg = obj.match(exp);
+    if (reg == null) {
+      return false;//不合法
+    }
+    else {
+      return true; //合法
+    } 
   }
 })

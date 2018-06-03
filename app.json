@@ -5,12 +5,13 @@
     "pages/compare/index",
     "pages/home/home",
     "pages/ip/ip",
-    "pages/cell/cell"
+    "pages/cell/cell",
+    "pages/bank/bank"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "核爆炸",
+    "navigationBarTitleText": "警便利",
     "navigationBarTextStyle": "black"
   }
 }

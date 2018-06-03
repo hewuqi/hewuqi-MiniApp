@@ -1,18 +1,22 @@
 /**index.wxss**/
-.userinfo {
+.header-image {
+  width: 100%;
+}
+
+.main {
+  padding-top: 100rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.title-image {
+  padding-top: 150rpx;
+  width: 750rpx;
+  height: 90rpx;
 }
 
-.userinfo-logo {
+.logo {
   float: left;
   margin-top: 50rpx;
   width: 128rpx;
@@ -21,10 +25,6 @@
   border-radius: 0%;
 }
 
-.userinfo-nickname {
+.title-text {
   color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
 }

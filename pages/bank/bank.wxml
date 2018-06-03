@@ -1,0 +1,37 @@
+<view>
+  <image src="./../../src/pic/header.png" mode='widthFix' class="header-image" />  
+  <view style='margin-top:{{style.marginTop}}'>
+    <zan-row>
+      <zan-col col="18" col-class="custom-zan-col">
+        <zan-field
+          placeholder="请输入银行卡号"
+          value="{{cardNo}}"
+          bind:change="onCardNoFieldChange">
+        </zan-field>
+      </zan-col>
+      <zan-col col="6" col-class="custom-zan-col">
+        <zan-button type='primary' bindtap='ipSearch'>查询</zan-button>
+      </zan-col>
+    </zan-row>
+  </view>
+    <zan-field 
+      title="归属信息："
+      disabled="true" value="{{resp.area}}"></zan-field>
+    <zan-field 
+      title="银行名称："
+      disabled="true" value="{{resp.bankName}}"></zan-field>
+    <zan-field 
+      title="银行卡名："
+      disabled="true" value="{{resp.cardName}}"></zan-field>
+    <zan-field 
+      title="银行卡种"
+      disabled="true" value="{{resp.cardType}}"></zan-field>
+    <zan-field 
+      title="客服电话："
+      disabled="true" value="{{resp.serviceNum}}"></zan-field>
+    <zan-field 
+      title="官方网址"
+      disabled="true" value="{{resp.url}}"></zan-field>
+  <view >
+  </view>
+</view>

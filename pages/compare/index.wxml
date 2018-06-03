@@ -1,28 +1,17 @@
 <!--pages/compare/index.wxml-->
 <!--index.wxml-->
-<view class="container">
-  <image src="./../../src/pic/header.png" mode='widthFix' class="header-image" />  
-  <view>
-    <text class="compare-head">请上传要比对的图片</text>
-  </view>
-  <view>
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <!--<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> 
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text> --><ul>
-      <li>
-        <image class="compare-pic" src="{{comparePic1}}" ></image>
-        <image class="compare-pic" src="{{comparePic2}}"></image> 
-      </li>
-      <li>
-        <button type='primary'
-        class='compare-button'bindtap='uploadPic1' >人脸1</button> 
-        <button type='primary' 
-        class='compare-button' bindtap='uploadPic2'>人脸2</button>
-      </li>
-    </ul>
-    </block>
-  </view>
+<image src="./../../src/pic/header.png" mode='widthFix' class="header-image" />  
+<view>
+    <view>
+      <zan-row>
+        <zan-col col="12" col-class="custom-zan-col">
+          <image class="compare-pic" src="{{comparePic1}}" bindtap='uploadPic1'></image>
+        </zan-col>
+        <zan-col col="12" col-class="custom-zan-col">
+          <image class="compare-pic" src="{{comparePic2}}" bindtap='uploadPic2'></image>
+        </zan-col>
+      </zan-row>
+    </view>
   <view class="compare-result-view">
     <text text-align: center>人脸相似度</text>
     <result>{{compareResult}}</result>
